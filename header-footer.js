@@ -142,10 +142,10 @@ class MyHeader extends HTMLElement {
                 <a class="nav-link" href="index.html"> H O M E </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects"> P R O J E C T S </a>
+                <a class="nav-link" href="PROJECTS.html"> P R O J E C T S </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#whoarewe"> A B O U T - U S </a>
+                <a class="nav-link" href="ABOUTUS.html"> A B O U T - U S </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contacts"> C O N T A C T S </a>
