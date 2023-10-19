@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mini project 1</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="x-icon" href="120px-Architectural_Association_School_of_Architecture_logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src=header-footer.js defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .colwhoarewe p{
+          margin-left: 8%;
+          margin-right: 8%;
+        }
+        .col-3 {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        .card img{
+          height: 300px;
+          width: 100%;
+        }
+        #whoarewe {
+          margin-top: 20px;
+          margin-bottom: 40px;
+          text-decoration: underline 2px;
+        }
+        #p-whoarewe {
+          text-align: justify;
+        }
+        .d-block {
+          height: 60vh;
+        }
+        #projects {
+          margin-top: 20px;
+          font-size: 52px;
+          font-family: 'Young Serif', serif;
+          color: black;
+          text-align: center;
+        }
+        .row{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .onlybutton {
+          text-align: center;
+          padding: 20px;
+        }
+        .rowwaw {
+          background-color: grey;
+          color: #fff;
+        }
+        #projectbtn {
+          display: block;
+          margin: auto;
+          padding: 100px;
+        }
+        /* @media only screen and (max-width: 768px) {
+            .backvideo {
+                width: 100%;
+                height: 100vh;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+            .backvideo {
+                width: auto;
+                height: 1500px;
+            }
+        } */
+        @media only screen and (max-width: 375px) {
+            .backvideo {
+                width: auto;
+                height: 100vh;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .backvideo {
+                width: auto;
+                height: 100vh;
+            }
+        }
+        @media only screen and (max-width: 440px) {
+            .col-3 {
+                width: 100%;
+                margin: auto;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .col-3 {
+                width: 100%;
+                margin: auto;
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            .col-3 {
+                width: 100%;
+                margin: auto;
+            }
+        }
+        @media only screen and (max-width: 1630px) {
+            .col-3 .card {
+                width: 100%;
+                display: block;
+                margin:auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            .card {
+                width: 100%;
+                display: block;
+                margin:auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .card {
+                width: 20rem;
+                display: block;
+                margin:auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            
+        }
+        @media only screen and (max-width: 375px) {
+            .card{
+                width: 100%;
+                display: block;
+                margin:auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .col-6 {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 574px) {
+          .colwhoarewe {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+          .colwhoarewe {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 1060px) {
+          #projectbtn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            .rowwaw .colwhoarewe {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+          .rowwaw .colwhoarewe {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+          .navbar-collapse ul li {
+                background-color:rgba(0, 0, 0, 0.9);
+            }
+        }
+        @media only screen and (max-width: 870px) {
+          .navbar-collapse ul li {
+                background-color:rgba(0, 0, 0, 0.7);
+            }
+        }
+        @media only screen and (max-width: 990px) {
+          .navbar-toggler-icon {
+                background-color: #fff;
+                border-radius: 30%;
+                border-style: solid;
+                padding: 15px 15px;
+                opacity: 0.5;
+          }
+        }
+        #progress{
+          background-color: #03cc65;
+          position: fixed;
+          bottom: 20px;
+          right: 10px;
+          height: 70px;
+          width: 70px;
+          display: none;
+          place-items: center;
+          border-radius: 50%;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          z-index: 1;
+        }
+        #progress-value{
+          display: block;
+          height: calc(100%-15px);
+          width: 60px;
+          background-color: #ffffff;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          font-size: 40px;
+          color: #001a2e;
+        }
+        .hero {
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          padding: 0 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .content {
+          text-align: center;
+        }
+        .content h1 {
+          font-size: 72px;
+          color: #fff;
+        }
+        .content a{
+          text-decoration: none;
+          display: inline-block;
+          color: #fff;
+          font-size: 24px;
+          border: 2px solid #fff;
+          padding: 14px 70px;
+          border-radius: 50px;
+          margin-top: 20px;
+        }
+        .backvideo {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+        }
+        .navbar {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .nav-link{
+          color: #ffffff;
+        }
+        #container-row{
+          width: 86%;
+          margin: auto;
+        }
+        .container-projects{
+          background-color: #fff;
+        }
+        hr{
+          width: 86%;
+          margin: auto;
+        }
+        .card {
+          width: 22rem;
+        }
+    </style>
+    <body>
+        <div id="progress">
+          <span id="progress-value">&#x1F815;</span>
+        </div>
+
+          <div class="hero">
+            
+            <video autoplay loop muted plays-inline class="backvideo">
+              <source src="production_id_4770380 (1080p).mp4" type="video/mp4">
+            </video>
+             
+              <my-header></my-header>
+            
+          <div class="content">
+            <h1>Build your House Today</h1>
+            <a href="ContactUs.html">Contact Us</a>
+          </div>
+          
+        </div>
+</div>
+
+
+
+<div class="container-projects">
+        <div class="row">
+          <div class="col-12" id="projects">
+            PROJECTS
+          </div>
+        </div>
+        <hr>
+  <div class="row" id="container-row">
+          <div class="col-3">
+            <div class="card">
+              <img src="townhouse.jpeg" class="card-img-top img-fluid" alt="image">
+              <div class="card-body">
+                <h5 class="card-title">TOWN HOUSE</h5>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta iste placeat exercitationem aperiam, iusto veniam possimus beatae reprehenderit dolores veritatis, tempora ipsa totam nemo obcaecati maxime, eaque consequuntur ea a.</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Read More</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-3">
+          <div class="card">
+            <img src="apartments.jpeg" class="card-img-top img-fluid" alt="image">
+            <div class="card-body">
+              <h5 class="card-title">APARTMENTS</h5>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta iste placeat exercitationem aperiam, iusto veniam possimus beatae reprehenderit dolores veritatis, tempora ipsa totam nemo obcaecati maxime, eaque consequuntur ea a.</p>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Read More</a>
+            </div>
+            </div>
+        </div>
+        
+        <div class="col-3">
+          <div class="card">
+            <img src="condo.jpeg" class="card-img-top img-fluid" alt="image">
+            <div class="card-body">
+            <h5 class="card-title">CONDO</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta iste placeat exercitationem aperiam, iusto veniam possimus beatae reprehenderit dolores veritatis, tempora ipsa totam nemo obcaecati maxime, eaque consequuntur ea a.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Read More</a>
+            
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">TOWN HOUSE</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Cost: 5,000$<br>
+                    Build on 1990</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+            </div>
+        </div>
+
+        <div class="col-3" id="projectbtn">
+
+            <a href="PROJECTS.html" class="btn btn-warning">View More</a>
+      
+        </div>
+    </div>
+  </div>
+
+
+
+
+       
+
+
+
+
+
+        </div>
+      </div>
+      
+  </div>
+        </div>
+
+
+        <div class="row rowwaw">
+          <div class="col colwhoarewe">
+            <h1 id="whoarewe" class="text-center">WHO ARE WE?</h1>
+            <p id="p-whoarewe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil ipsam? At, unde id, possimus impedit quaerat maiores quis consequatur reiciendis doloribus animi, molestiae saepe voluptatum enim magnam. Exercitationem, deleniti.
+            </p>
+            <div class="onlybutton"><a href="ABOUTUS.html" class="btn btn-primary">READ MORE</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+        <my-footer></my-footer>
+
+        
+    </body>
+</html>

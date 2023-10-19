@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src=header-footer.js defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .form123{
+            width: 86%;
+            height: 60vh;
+            margin: auto;
+        }
+        h1 {
+            margin-top: 30px;
+        }
+        #form {
+            text-align: center;
+        }
+        .send-button {
+            margin-top: 5px;
+            height: 34px;
+            width: 100%;
+            overflow: hidden;
+            transition: all .2s ease-in-out;
+        }
+        .send-text {
+            display: block;
+            margin-top: 10px;
+            font: 700 12px 'Lato', sans-serif;
+            letter-spacing: 2px;
+        }
+        .alt-send-button {
+            width: 100%;
+            height: 34px;
+            transition: all .2s ease-in-out;
+        }
+        .alt-send-button:hover {
+            transform: translate3d(0px, -29px, 0px);
+        }
+        .form-control, textarea {
+            max-width: 100%;
+            background-color: #919090;
+            color: #fdfafa;
+            letter-spacing: 1px;
+        }
+        .social-media-list {
+            position: relative;
+            font-size: 22px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .social-media-list li a {
+            color: #fff;
+        }
+
+        .social-media-list li {
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            margin: 10px 3px;
+            line-height: 60px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: rgb(27,27,27);
+            cursor: pointer; 
+            transition: all .2s ease-in-out;
+        }
+
+        .social-media-list li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            opacity: 0;
+            box-shadow: 0 0 0 1px #fff;
+            transition: all .2s ease-in-out;
+        }
+
+        .social-media-list li:hover {
+            background-color: #fff; 
+        }
+
+        .social-media-list li:hover:after {
+            opacity: 1;  
+            transform: scale(1.12);
+            transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+        }
+
+        .social-media-list li:hover a {
+            color: #000;
+        }
+        .direct-contact-container {
+            max-width: 100%;
+        }
+        .contact-list {
+            list-style-type: none;
+            margin-left: -30px;
+            padding-right: 20px;
+        }
+        .list-item {
+            line-height: 4;
+            color: #000;
+        }
+        .contact-text {
+            font: 300 18px 'Lato', sans-serif;
+            letter-spacing: 1.9px;
+            color: black;
+        }
+        .place {
+            margin-left: 62px;
+        }
+        .phone {
+            margin-left: 56px;
+        }
+
+        .gmail {
+            margin-left: 53px;
+        }
+        .contact-text a {
+            color: #000;
+            text-decoration: none;
+            transition-duration: 0.2s;
+        }
+        .contact-text a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        .direct-contact-container{
+            text-align: center;
+        }
+        .map {
+            text-align: center;
+            display: block;
+            margin-top: 30px;
+
+        }
+        @media only screen and (max-width: 1624px) {
+        .col-4 {
+            width: 100%;
+        }
+        .form123 {
+            height: 200vh;
+        }
+        }
+        @media only screen and (max-width: 1024px) {
+        .col-4 {
+            width: 100%;
+        }
+        .form123 {
+            height: 200vh;
+        }
+        }
+        @media only screen and (max-width: 524px) {
+        .col-4 {
+            width: 100%;
+        }
+        .map iframe {
+            width: 94%;
+        }
+        .form123 {
+            height: 210vh;
+        }
+        }
+        @media only screen and (max-width: 284px) {
+        .col-4 {
+            width: 100%;
+        }
+        .map iframe {
+            width: 94%;
+        }
+        .form123 {
+            height: 220vh;
+        }
+        .contact-list li i span {
+            font-size: xx-small;
+        }
+        }
+    </style>
+
+    <body>
+        <my-header></my-header>
+        <hr>
+        <div class="form123 container-fluid">
+            <div class="row">
+                <div class="col-4" id="form">
+                    <h1>FORM</h1>
+                    <input type="text" class="form-control" id="name" placeholder="FULL NAME" name="name" value="" required>
+                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                    <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                        <div class="alt-send-button">
+                          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="col-4">
+                    <div class="direct-contact-container">
+
+                        <h1>CONTACT</h1>
+          
+                        <ul class="contact-list">
+                          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Philippines, Davao City</span></i></li>
+                          
+                          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">+69 9150987654</a></span></i></li>
+                          
+                          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank" title="Send me an email">example@gmail.com</a></span></i></li>
+                          
+                        </ul>
+                
+                        <hr>
+                        <ul class="social-media-list">
+                          <li><a href="https://www.facebook.com/" target="_blank" class="contact-icon">
+                            <i class="fab fa fa-facebook-f" aria-hidden="true"></i></a>
+                          </li>
+                          <li><a href="https://www.instagram.com/" target="_blank" class="contact-icon">
+                            <i class="fab fa fa-instagram" aria-hidden="true"></i></a>
+                          </li>
+                          <li><a href="https://twitter.com/" target="_blank" class="contact-icon">
+                            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                          </li>     
+                        </ul>
+                        <hr>
+            
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.3122387625076!2d125.59919647349416!3d7.089757649509301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f96d0405555555%3A0x5b72abb046ad28c4!2sAwhag%20Village%20Subdivision!5e0!3m2!1sen!2sph!4v1697357413269!5m2!1sen!2sph" width="500" height="430" style="border:0; margin-left: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>  
+        <my-footer></my-footer>
+    </body>
+</html>
