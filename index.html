@@ -272,6 +272,64 @@
         .card {
           width: 22rem;
         }
+
+
+
+
+
+
+        
+        .projects-row {
+        width: 86%;
+        height: 10%;
+        /* background-color: grey; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 10px;
+    }
+    .projects-row ul li{
+        float: left;
+        text-decoration: none;
+        list-style: none;
+        padding: 0px 20px 0px 20px;
+        letter-spacing: 2px;
+    }
+    .projects-row ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    .projects-row ul li a:hover{
+        color: rgb(233, 185, 139);
+    }
+    .projects-frame iframe{
+        display: block;
+        margin: auto;
+        align-items: center;
+        margin-top: 15px;
+        /* background-color: rgb(20, 20, 20);
+        border-style: none; */
+    }
+    iframe {
+        width: 86%;
+        height: 80vh;
+    }
+    .dropdown a{
+        border-radius: 10px;
+        border-color: #000;
+    }
+
+
+
+        
+
+
+
+
+
+
+        
     </style>
     <body>
         <div id="progress">
@@ -296,7 +354,43 @@
 
 
 
-<div class="container-projects">
+
+<div class="projects-row">
+   
+
+  <h1>Projects</h1>
+  
+  <div class="dropdown">
+      <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          SEE HERE
+      </a>
+ 
+  <div class="project-ul">
+      
+  <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="Buildings.html" target="frame_2">Building</a></li>
+      <li><a class="dropdown-item" href="interior.html"  target="frame_2">Interior</a></li>
+      <li><a class="dropdown-item" href="external.html" target="frame_2">Exterior</a></li>
+  </ul>
+</div>
+
+</div>
+<a href="PROJECTS.html" style="text-decoration: underline;">View all projects</a>
+</div>
+
+
+<div class="projects-frame">
+  <iframe src="interior.html" name="frame_2"></iframe>
+</div>
+        
+
+
+
+
+
+
+        
+<!-- <div class="container-projects">
         <div class="row">
           <div class="col-12" id="projects">
             PROJECTS
@@ -364,7 +458,7 @@
         </div>
     </div>
   </div>
-
+ -->
 
 
 
