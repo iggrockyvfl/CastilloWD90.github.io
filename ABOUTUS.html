@@ -4,6 +4,7 @@
         <title>mini project 1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="x-icon" href="120px-Architectural_Association_School_of_Architecture_logo.png">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src=header-footer.js defer></script>
@@ -49,7 +50,10 @@
             transition: 200ms ease-in-out;
         }
         .img-wrapper:hover > img.blur {
-            filter: blur(10px);
+            filter: blur(2px);
+        }
+        .img-wrapper:hover > img.zoom {
+            transform: scale(1.1);
         }
         .img-wrapper:hover > .content.fade{
             opacity: 0;
@@ -129,28 +133,28 @@
 
             <div class="grid">
                 <div class="img-wrapper">
-                    <img class="img.blur" src="a.jpg">
+                    <img class="blur" src="a.jpg">
                     <div class="content fade"><a href="CEO-Aamir khan.html" target="iframe_1">CEO-Aamir Khan</a></div>
                 </div>
                 <div class="img-wrapper">
-                    <img class="img.blur" src="pic2.jpg">
-                    <div class="content fade">CEO-FULL NAME</div>
+                    <img class="zoom" src="pic2.jpg">
+                    <div class="content fade"><a href="#" target="iframe_1">Architect-Thorstein Macaria</a></div>
                 </div>
                 <div class="img-wrapper">
                     <img class="img.blur" src="pic3.jpg">
-                    <div class="content fade">CEO-FULL NAME</div>
+                    <div class="content fade"><a href="#" target="iframe_1">Enigneer-Vinzent Sitora</a></div>
                 </div>
                 <div class="img-wrapper">
                     <img class="img.blur" src="pic4.jpg">
-                    <div class="content fade">CEO-FULL NAME</div>
+                    <div class="content fade"><a href="#" target="iframe_1">CEO-FULL NAME</a></div>
                 </div>
                 <div class="img-wrapper">
                     <img class="img.blur" src="pic5.jpeg">
-                    <div class="content fade"><a href="CEO-Aamir khan.html">CEO-FULL NAME</a></div>
+                    <div class="content fade"><a href="#">Interior Designer-Mahesh Sotiris</a></div>
                 </div>
                 <div class="img-wrapper">
                     <img class="img.blur" src="pic6.jpeg">
-                    <div class="content fade">CEO-FULL NAME</div>
+                    <div class="content fade"><a href="#" target="iframe_1">CEO-FULL NAME</a></div>
                 </div>
                 <div class="img-wrapper">
                     <img class="img.blur" src="pic7.jpeg">
