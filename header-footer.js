@@ -113,6 +113,9 @@ class MyHeader extends HTMLElement {
           border: 1px solid #aaa;
           border-radius: 5px;
       }
+      #booknow {
+        cursor: pointer;
+      }
 
       @media only screen and (max-width: 375px) {
         .popup {
